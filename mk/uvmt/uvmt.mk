@@ -135,6 +135,14 @@ EMB_DEBUG_ARG       = $(if $(filter $(YES_VALS),$(EMB_DEBUG)),YES,NO)
 #DV_UVMT_SRCS                  = $(wildcard $(DV_UVMT_PATH)/*.sv))
 
 # NEW NEW NEW!!!
+# CORE-V-VERIF
+CV_VERIF_PKG        := $(CORE_V_VERIF)/vendor_lib/openhwgroup_core-v-verif
+export CV_VERIF_PKG  = $(CORE_V_VERIF)/vendor_lib/openhwgroup_core-v-verif
+
+# SVLIB
+SVLIB_PKG        := $(CORE_V_VERIF)/vendor_lib/verilab/svlib
+export SVLIB_PKG  = $(CORE_V_VERIF)/vendor_lib/verilab/svlib
+
 export DV_UVMT_PATH             = $(CORE_V_VERIF)/tb/uvmt
 export DV_UVME_PATH             = $(CORE_V_VERIF)/env/uvme
 export DV_UVML_HRTBT_PATH       = $(CV_VERIF_PKG)/lib/uvm_libs/uvml_hrtbt
@@ -216,17 +224,6 @@ export DESIGN_RTL_DIR = $(CV_CORE_PKG)/rtl
 RTLSRC_HOME   := $(CV_CORE_PKG)/rtl
 RTLSRC_INCDIR := $(RTLSRC_HOME)/include
 
-# SVLIB
-#SVLIB_PKG        := $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/verilab/svlib
-#export SVLIB_PKG  = $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/verilab/svlib
-SVLIB_PKG        := $(CORE_V_VERIF)/vendor_lib/verilab/svlib
-export SVLIB_PKG  = $(CORE_V_VERIF)/vendor_lib/verilab/svlib
-
-# CORE-V-VERIF
-#CV_VERIF_PKG        := $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/openhwgroup_core-v-verif
-#export CV_VERIF_PKG  = $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/openhwgroup_core-v-verif
-CV_VERIF_PKG        := $(CORE_V_VERIF)/vendor_lib/openhwgroup_core-v-verif
-export CV_VERIF_PKG  = $(CORE_V_VERIF)/vendor_lib/openhwgroup_core-v-verif
 
 # RVVI
 #RVVI_HOME             := $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/riscv-verification/RVVI
