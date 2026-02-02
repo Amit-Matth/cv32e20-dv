@@ -225,6 +225,7 @@ RTLSRC_HOME   := $(CV_CORE_PKG)/rtl
 RTLSRC_INCDIR := $(RTLSRC_HOME)/include
 
 
+
 # RVVI
 #RVVI_HOME             := $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/riscv-verification/RVVI
 #export RVVI_HOME       = $(CORE_V_VERIF)/$(CV_CORE_LC)/vendor_lib/riscv-verification/RVVI
