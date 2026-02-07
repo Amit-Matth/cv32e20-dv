@@ -715,8 +715,6 @@ NUM_JOBS ?= 8
 $(SPIKE_FESVR_LIB).so $(SPIKE_RISCV_LIB).so:
 	mkdir -p $(SPIKE_PATH)/build;
 	[ ! -f $(SPIKE_PATH)/build/config.log ] && cd $(SPIKE_PATH)/build && ../configure --prefix=$(SPIKE_INSTALL_DIR) || true
-	#make -C $(SPIKE_PATH)/build/ -j $(NUM_JOBS) yaml-cpp-static;
-	#make -C $(SPIKE_PATH)/build/ -j $(NUM_JOBS) yaml-cpp;
 	make -C $(SPIKE_PATH)/build/ -j $(NUM_JOBS) install;
 
 spike_lib: $(SPIKE_FESVR_LIB).so $(SPIKE_RISCV_LIB).so
